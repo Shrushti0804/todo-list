@@ -1,0 +1,23 @@
+{% extends 'base/main.html'%}
+{% block content%}
+<div class="header">
+<h1>Register</h1>
+</div>
+<div class="task-form">
+<form method="POST">
+    {% csrf_token %}
+    <label>{{form.username.label}}</label>
+    {{form.username}}
+    <label>{{form.password1.label}}</label>
+    {{form.password1}}
+    <label>{{form.password2.label}}</label>
+    {{form.password2}}
+
+    <!-- {{form.as_p}} -->
+    <input class="button" type="submit" value="Register"> 
+</form>
+<p>Don't have an account?<a href="{% url 'login'%}">Login here</a></p>
+</div>
+
+
+{% endblock content%}

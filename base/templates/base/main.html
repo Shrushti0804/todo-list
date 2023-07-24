@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <title>To do list</title>
+    <style>
+        body{
+            background-color:aliceblue;
+            font-family: 'Raleway', sans-serif;
+            padding-top:50px;
+            align-content: center;
+            
+        }
+        .container{
+          max-width:500px;
+          margin: auto;
+          background-color:white;
+          box-shadow: 10px 10px 5px #aaaaaa;
+          border: 1px solid black;
+          border-radius: 10px 10px 0 0 ;
+        
+        }
+        .header{
+          display:flex;
+          justify-content: space-between;
+          background-color: rgb(241, 227, 208);
+          border-radius: 10px 10px 0 0;
+          padding:10px 20px 0 5px;
+          
+        }
+        .header a{
+          text-decoration: none;
+          color: black;
+          
+        }
+
+        .task-wrapper{
+          align-items: center;
+          justify-content: space-between;
+          display:inline;
+          font-size:large;
+          padding:20px;
+          text-decoration: none;
+          display:flex;
+        }
+        .delete-link{
+          float:right;
+          text-decoration: none;
+          font-weight: 1000;
+          color:red;
+          font-size: 25px;
+       
+        } 
+        .task-title{
+          display:flex;
+        }
+        .task-title a{
+          text-decoration: none;
+          color:brown;
+          font-size: large;
+          margin-left: 10px;
+        }
+        .gg-check-o {
+          box-sizing: border-box;
+          position: relative;
+          display: block;
+          transform: scale(var(--ggs,1));
+          width: 22px;
+          height: 22px;
+          border: 2px solid;
+          border-radius: 100px
+        }
+
+        .gg-check-o::after {
+          content: "";
+          display: block;
+          box-sizing: border-box;
+          position: absolute;
+          left: 3px;
+          top: -1px;
+          width: 6px;
+          height: 10px;
+          border-color: currentColor;
+          border-width: 0 2px 2px 0;
+          border-style: solid;
+          transform-origin: bottom left;
+          transform: rotate(45deg)
+        } 
+        .gg-radio-check {
+          box-sizing: border-box;
+          position: relative;
+          display: block;
+          transform: scale(var(--ggs,1));
+          width: 20px;
+          height: 20px;
+          border: 2px solid;
+          border-radius: 100px
+        } 
+        .task-items-wrapper{
+          border-radius: 5px;
+        }
+
+        .add-wrapper{
+          background-color: rgb(149, 149, 227);
+          margin:10px 0 0 10px;
+          border-radius: 3px;
+       
+        }
+        .add-wrapper a{
+          color: white;
+          text-decoration: none;
+          padding:10px;
+          
+        }
+        .button{
+          background-color: rgb(149, 149, 227);
+          margin:10px 0 10px 10px;
+          border-radius: 3px;
+          color:white;
+        }
+        .button a{
+          color: white;
+          text-decoration: none;
+          padding:10px;
+        }
+        .task-form-header{
+          color:black;
+          margin:auto;
+          width: fit-content;
+          font-size: x-large;
+
+          
+        }
+        input[type=text],
+        input[type=password],
+        textarea{
+          border: 1px solid brown;
+          border-radius: 5px;
+          padding:10px;
+          width: 90%;
+          margin-left: 10px;
+        }
+        label{
+          padding-top: 10px !important; 
+          display: block;
+          margin-left: 10px;
+        }
+        .task-form{
+          padding:20px;
+        }
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+        {% block content%}
+
+        {% endblock content%}
+    </div>
+	
+  </body>
+</html>
+
+
+
